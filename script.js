@@ -1,0 +1,1 @@
+const s=document.querySelector(".language");function apply(v){document.documentElement.lang=v;document.body.classList.toggle("kn",v==="kn");document.querySelectorAll("[data-en][data-kn]").forEach(e=>e.textContent=e.dataset[v]);localStorage.setItem("gpLanguage",v)}s.value=localStorage.getItem("gpLanguage")||"en";apply(s.value);s.addEventListener("change",()=>apply(s.value));
